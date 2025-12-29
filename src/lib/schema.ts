@@ -1,5 +1,8 @@
-import { neon } from "@neondatabase/serverless";
-import { drizzle } from "drizzle-orm/neon-http";
+// import { neon } from "@neondatabase/serverless";
+// import { drizzle } from "drizzle-orm/neon-http";
+import { drizzle } from "drizzle-orm/node-postgres";
+import { Pool } from "pg";
+
 import {
   boolean,
   integer,
@@ -10,8 +13,13 @@ import {
 } from "drizzle-orm/pg-core";
 import type { AdapterAccountType } from "next-auth/adapters";
 
-const sql = neon(process.env.DATABASE_URL!);
-export const db = drizzle({ client: sql });
+// const sql = neon(process.env.DATABASE_URL!);
+// export const db = drizzle({ client: sql });
+
+const pool = new Pool({
+  connectionString: process.env.DATABASE_URL,
+});
+export const db = drizzle(pool);
 
 export const users = pgTable("user", {
   id: text("id")
@@ -97,3 +105,22 @@ export const authenticators = pgTable(
     },
   ],
 );
+
+export const games = pgTable("game", {
+  id: text("id")
+    .primaryKey()
+    .$defaultFn(() => crypto.randomUUID()),
+  imageUrl: text("imageUrl").notNull(),
+  diffCoordinates: text("diffCoordinates").notNull(), // Stored as JSON string {x, y, radius} to avoid complex casting for now, or use json() if preferred but starter uses text commonly
+  createdAt: timestamp("createdAt", { mode: "date" }).defaultNow().notNull(),
+  completedAt: timestamp("completedAt", { mode: "date" }),
+});
+
+export const leaderboard = pgTable("leaderboard", {
+  id: text("id")
+    .primaryKey()
+    .$defaultFn(() => crypto.randomUUID()),
+  username: text("username").notNull(),
+  score: integer("score").notNull(), // Time in milliseconds
+  createdAt: timestamp("createdAt", { mode: "date" }).defaultNow().notNull(),
+});

@@ -4,44 +4,23 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 
-import { LangSwitcher } from "@/components/lang-switcher";
 import { ThemeProvider } from "@/components/theme-provider";
-import { ThemeSwitcher } from "@/components/theme-switcher";
 import { routing } from "@/i18n/routing";
 import { fonts } from "@/lib/fonts";
 import { siteConfig } from "@/lib/site-config";
 import { cn } from "@/lib/utils";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: siteConfig.title,
-    template: `%s | ${siteConfig.title}`,
+    default: "El & Hem | Premium Kaffeupplevelser",
+    template: `%s | El & Hem`,
   },
-  description: siteConfig.description,
-  keywords: siteConfig.keywords,
-  robots: { index: true, follow: true },
+  description: "Din destination för Sage espressomaskiner och premium kaffebönor.",
   icons: {
     icon: "/favicon/favicon.ico",
-    shortcut: "/favicon/favicon-16x16.png",
-    apple: "/favicon/apple-touch-icon.png",
-  },
-  verification: {
-    google: siteConfig.googleSiteVerificationId,
-  },
-  openGraph: {
-    url: siteConfig.url,
-    title: siteConfig.title,
-    description: siteConfig.description,
-    siteName: siteConfig.title,
-    images: "/opengraph-image.jpg",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: siteConfig.title,
-    description: siteConfig.description,
-    images: "/opengraph-image.jpg",
   },
 };
 
@@ -60,12 +39,16 @@ const RootLayout = async ({
 
   return (
     <html lang={locale} suppressHydrationWarning>
-      <body className={cn("min-h-screen font-sans", fonts)}>
+      <body className={cn("min-h-screen font-sans bg-stone-50 text-stone-900", fonts)}>
         <NextIntlClientProvider>
-          <ThemeProvider attribute="class">
-            {children}
-            <LangSwitcher className="absolute right-5 bottom-16 z-10" />
-            <ThemeSwitcher className="absolute right-5 bottom-5 z-10" />
+          <ThemeProvider attribute="class" defaultTheme="light" forcedTheme="light">
+            <div className="flex min-h-screen flex-col">
+              <Header />
+              <main className="flex-1">
+                {children}
+              </main>
+              <Footer />
+            </div>
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>
