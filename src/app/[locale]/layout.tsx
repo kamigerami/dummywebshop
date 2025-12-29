@@ -13,7 +13,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteConfig.url),
+  metadataBase: new URL(siteConfig.url || "http://localhost:3000"),
   title: {
     default: "El & Hem | Premium Kaffeupplevelser",
     template: `%s | El & Hem`,

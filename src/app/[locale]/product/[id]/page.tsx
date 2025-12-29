@@ -24,13 +24,26 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         };
     }
 
+    const keywords = [
+        product.name,
+        'Sage',
+        'Espressomaskin',
+        'Kaffemaskin',
+        'Barista',
+        'Espresso Machine',
+        'Specialkaffe',
+        'Hemmabarista'
+    ];
+
     return {
-        title: `${product.name} | El & Hem`,
-        description: `Köp ${product.name} hos El & Hem. ${product.description.substring(0, 150)}...`,
+        title: `${product.name} - Barista Espressomaskin | El & Hem`,
+        description: `Köp ${product.name} från Sage hos El & Hem. En premium barista espressomaskin för hemmabruk. ${product.description.substring(0, 150)}...`,
+        keywords: keywords,
         openGraph: {
-            title: `${product.name} | El & Hem`,
+            title: `${product.name} - Barista Espressomaskin`,
             description: product.description,
             images: [product.image],
+            type: 'website',
         },
     };
 }
