@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export function Footer() {
     return (
         <footer className="bg-stone-50 px-6 py-12 text-stone-600 border-t border-stone-200">
@@ -29,10 +31,10 @@ export function Footer() {
                 <div>
                     <h3 className="mb-4 text-sm font-bold uppercase tracking-wider text-stone-900">Länkar</h3>
                     <ul className="space-y-2 text-sm">
-                        <li><a href="#" className="hover:text-amber-600 transition-colors">Köpvillkor</a></li>
-                        <li><a href="#" className="hover:text-amber-600 transition-colors">Integritetspolicy</a></li>
-                        <li><a href="#" className="hover:text-amber-600 transition-colors">Returer</a></li>
-                        <li><a href="#" className="hover:text-amber-600 transition-colors">Kundservice</a></li>
+                        <li><Link href="/" className="hover:text-amber-600 transition-colors">Köpvillkor</Link></li>
+                        <li><Link href="/" className="hover:text-amber-600 transition-colors">Integritetspolicy</Link></li>
+                        <li><Link href="/" className="hover:text-amber-600 transition-colors">Returer</Link></li>
+                        <li><Link href="/" className="hover:text-amber-600 transition-colors">Kundservice</Link></li>
                     </ul>
                 </div>
             </div>

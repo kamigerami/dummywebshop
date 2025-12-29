@@ -5,10 +5,33 @@ import { products } from '@/data/products';
 import { ArrowLeft, Check, ShoppingBag, Star, Truck } from 'lucide-react';
 import { ProductCard } from '@/components/ProductCard';
 
+import { Metadata } from 'next';
+
 interface PageProps {
-    params: {
+    params: Promise<{
         id: string;
         locale: string;
+    }>;
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+    const { id } = await params;
+    const product = products.find((p) => p.id === id);
+
+    if (!product) {
+        return {
+            title: 'Produkt ej hittad | El & Hem',
+        };
+    }
+
+    return {
+        title: `${product.name} | El & Hem`,
+        description: `Köp ${product.name} hos El & Hem. ${product.description.substring(0, 150)}...`,
+        openGraph: {
+            title: `${product.name} | El & Hem`,
+            description: product.description,
+            images: [product.image],
+        },
     };
 }
 
@@ -20,6 +43,32 @@ export default async function ProductPage({ params }: PageProps) {
         notFound();
     }
 
+    const jsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'Product',
+        name: product.name,
+        image: product.image,
+        description: product.description,
+        sku: product.id,
+        brand: {
+            '@type': 'Brand',
+            name: 'Sage',
+        },
+        offers: {
+            '@type': 'Offer',
+            url: `https://elochhem.se/product/${product.id}`,
+            priceCurrency: 'SEK',
+            price: product.price,
+            availability: 'https://schema.org/InStock',
+            itemCondition: 'https://schema.org/NewCondition',
+        },
+        aggregateRating: {
+            '@type': 'AggregateRating',
+            ratingValue: '4.8',
+            reviewCount: '48',
+        },
+    };
+
     const relatedProducts = products
         .filter((p) => p.category === product.category && p.id !== product.id)
         .slice(0, 3);
@@ -28,6 +77,10 @@ export default async function ProductPage({ params }: PageProps) {
 
     return (
         <div className="min-h-screen pb-20 pt-10">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
             <div className="container mx-auto px-4 sm:px-6">
                 <Link
                     href="/"

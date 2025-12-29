@@ -152,8 +152,9 @@ export default function CartPage() {
 
                                     <div className="grid gap-4 sm:grid-cols-2">
                                         <div className="space-y-2">
-                                            <label className="text-sm font-medium text-stone-700">Förnamn</label>
+                                            <label htmlFor="firstName" className="text-sm font-medium text-stone-700">Förnamn</label>
                                             <input
+                                                id="firstName"
                                                 type="text"
                                                 name="firstName"
                                                 value={formData.firstName}
@@ -162,8 +163,9 @@ export default function CartPage() {
                                             />
                                         </div>
                                         <div className="space-y-2">
-                                            <label className="text-sm font-medium text-stone-700">Efternamn</label>
+                                            <label htmlFor="lastName" className="text-sm font-medium text-stone-700">Efternamn</label>
                                             <input
+                                                id="lastName"
                                                 type="text"
                                                 name="lastName"
                                                 value={formData.lastName}
@@ -174,8 +176,9 @@ export default function CartPage() {
                                     </div>
 
                                     <div className="space-y-2">
-                                        <label className="text-sm font-medium text-stone-700">Adress</label>
+                                        <label htmlFor="address" className="text-sm font-medium text-stone-700">Adress</label>
                                         <input
+                                            id="address"
                                             type="text"
                                             name="address"
                                             value={formData.address}
@@ -186,8 +189,9 @@ export default function CartPage() {
 
                                     <div className="grid gap-4 sm:grid-cols-2">
                                         <div className="space-y-2">
-                                            <label className="text-sm font-medium text-stone-700">Postnummer</label>
+                                            <label htmlFor="postalCode" className="text-sm font-medium text-stone-700">Postnummer</label>
                                             <input
+                                                id="postalCode"
                                                 type="text"
                                                 name="postalCode"
                                                 value={formData.postalCode}
@@ -196,8 +200,9 @@ export default function CartPage() {
                                             />
                                         </div>
                                         <div className="space-y-2">
-                                            <label className="text-sm font-medium text-stone-700">Stad</label>
+                                            <label htmlFor="city" className="text-sm font-medium text-stone-700">Stad</label>
                                             <input
+                                                id="city"
                                                 type="text"
                                                 name="city"
                                                 value={formData.city}
@@ -209,8 +214,9 @@ export default function CartPage() {
 
                                     <div className="grid gap-4 sm:grid-cols-2">
                                         <div className="space-y-2">
-                                            <label className="text-sm font-medium text-stone-700">E-post</label>
+                                            <label htmlFor="email" className="text-sm font-medium text-stone-700">E-post</label>
                                             <input
+                                                id="email"
                                                 type="email"
                                                 name="email"
                                                 value={formData.email}
@@ -219,8 +225,9 @@ export default function CartPage() {
                                             />
                                         </div>
                                         <div className="space-y-2">
-                                            <label className="text-sm font-medium text-stone-700">Telefon</label>
+                                            <label htmlFor="phone" className="text-sm font-medium text-stone-700">Telefon</label>
                                             <input
+                                                id="phone"
                                                 type="tel"
                                                 name="phone"
                                                 value={formData.phone}
@@ -233,9 +240,10 @@ export default function CartPage() {
                                     <div className="pt-6 border-t border-stone-100">
                                         <h3 className="mb-4 text-lg font-bold text-stone-900">Fraktalternativ</h3>
                                         <div className="space-y-3">
-                                            <label className={`flex items-center justify-between p-4 rounded-lg border cursor-pointer transition-all ${shippingMethod === 'standard' ? 'border-amber-600 bg-amber-50' : 'border-stone-200 hover:border-amber-200'}`}>
-                                                <div className="flex items-center gap-3">
+                                            <div className={`flex items-center justify-between p-4 rounded-lg border cursor-pointer transition-all ${shippingMethod === 'standard' ? 'border-amber-600 bg-amber-50' : 'border-stone-200 hover:border-amber-200'}`}>
+                                                <label htmlFor="shipping-standard" className="flex items-center gap-3 w-full cursor-pointer" aria-label="Standardfrakt">
                                                     <input
+                                                        id="shipping-standard"
                                                         type="radio"
                                                         checked={shippingMethod === 'standard'}
                                                         onChange={() => setShippingMethod('standard')}
@@ -245,13 +253,14 @@ export default function CartPage() {
                                                         <div className="font-bold text-stone-900">Standardfrakt</div>
                                                         <div className="text-sm text-stone-500">3-5 arbetsdagar</div>
                                                     </div>
-                                                </div>
+                                                </label>
                                                 <span className="font-bold text-green-600">Gratis</span>
-                                            </label>
+                                            </div>
 
-                                            <label className={`flex items-center justify-between p-4 rounded-lg border cursor-pointer transition-all ${shippingMethod === 'express' ? 'border-amber-600 bg-amber-50' : 'border-stone-200 hover:border-amber-200'}`}>
-                                                <div className="flex items-center gap-3">
+                                            <div className={`flex items-center justify-between p-4 rounded-lg border cursor-pointer transition-all ${shippingMethod === 'express' ? 'border-amber-600 bg-amber-50' : 'border-stone-200 hover:border-amber-200'}`}>
+                                                <label htmlFor="shipping-express" className="flex items-center gap-3 w-full cursor-pointer" aria-label="Expressfrakt">
                                                     <input
+                                                        id="shipping-express"
                                                         type="radio"
                                                         checked={shippingMethod === 'express'}
                                                         onChange={() => setShippingMethod('express')}
@@ -261,9 +270,9 @@ export default function CartPage() {
                                                         <div className="font-bold text-stone-900">Expressfrakt</div>
                                                         <div className="text-sm text-stone-500">1-2 arbetsdagar</div>
                                                     </div>
-                                                </div>
+                                                </label>
                                                 <span className="font-bold text-stone-900">99:-</span>
-                                            </label>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
