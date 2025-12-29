@@ -3,19 +3,19 @@ import { z } from "zod";
 
 export const env = createEnv({
   server: {
-    DATABASE_URL: z.string().min(1),
-    APP_URL: z.string().url().min(1),
+    DATABASE_URL: z.string().optional(),
+    APP_URL: z.string().optional(),
     GOOGLE_SITE_VERIFICATION_ID: z.string().optional(),
-    GITHUB_ID: z.string().min(1),
-    GITHUB_SECRET: z.string().min(1),
-    NEXTAUTH_URL: z.string().url().optional(),
-    NEXTAUTH_SECRET: z.string().min(1),
-    STRIPE_SECRET_KEY: z.string().min(1),
-    STRIPE_WEBHOOK_SECRET_KEY: z.string().min(1),
-    STRIPE_SUBSCRIPTION_PRICE_ID: z.string().min(1),
+    GITHUB_ID: z.string().optional(),
+    GITHUB_SECRET: z.string().optional(),
+    NEXTAUTH_URL: z.string().optional(),
+    NEXTAUTH_SECRET: z.string().optional(),
+    STRIPE_SECRET_KEY: z.string().optional(),
+    STRIPE_WEBHOOK_SECRET_KEY: z.string().optional(),
+    STRIPE_SUBSCRIPTION_PRICE_ID: z.string().optional(),
   },
   client: {
-    NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY: z.string().min(1),
+    NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY: z.string().optional(),
   },
   runtimeEnv: {
     DATABASE_URL: process.env.DATABASE_URL,
