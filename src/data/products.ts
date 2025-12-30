@@ -13,13 +13,13 @@ export const products: Product[] = [
   // Machines
   {
     id: "sage-barista-touch-impress",
-    name: "Sage Barista Touch Impress",
+    name: "Sage Barista Touch Impress SES882BSS",
     description:
       "Upplev tredje vågens specialkaffe hemma med hjälp av Swipe, Select och Impress. Barista Touch™ Impress guidar dig genom varje steg för att göra exakt det kaffe du vill ha, och IMPRESS™ Puck System säkerställer perfekt dosering och packning.",
-    price: 11199, // ~30% off 15999
+    price: 12299, // ~30% off 15999
     originalPrice: 15999,
     image:
-      "https://assets.sageappliances.com/cdn-cgi/image/width=1300,format=auto/BES882/SES882BTR4GUK1/pdp_1300px.png?pdp", // Official Sage Image
+      "https://assets.sageappliances.com/cdn-cgi/image/width=1300,format=auto/BES882/SES882BSS4GUK1/pdp_1300px.png?pdp", // Official Sage Image
     category: "machine",
     features: [
       "Impess™ Puck System",
