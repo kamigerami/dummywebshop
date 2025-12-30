@@ -25,6 +25,10 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "www.breville.com",
       },
+      {
+        protocol: "https",
+        hostname: "assets.icanet.se",
+      },
     ],
   },
 };
