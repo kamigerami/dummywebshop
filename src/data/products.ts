@@ -122,7 +122,7 @@ export const products: Product[] = [
     price: 11999,
     originalPrice: 11999,
     image:
-      "https://assets.sageappliances.com/cdn-cgi/image/width=1300,format=auto/BES878/SES878DBL4EEU1/pdp.jpg?pdp",
+      "https://assets.sageappliances.com/cdn-cgi/image/width=1300,format=auto/BES878/SES878DBL4EEU1/pdp.jpg",
     category: "machine",
     features: [
       "LCD-skärm för feedback",
@@ -155,7 +155,7 @@ export const products: Product[] = [
     price: 17499,
     originalPrice: 17499,
     image:
-      "https://www.breville.com/content/dam/breville/de/catalog/products/images/ses/ses920bss4eeu1/pdp.jpg?pdp",
+      "https://www.breville.com/content/dam/breville/de/catalog/products/images/ses/ses920bss4eeu1/pdp.jpg",
     category: "machine",
     features: [
       "Dedikerad ångkokare",
