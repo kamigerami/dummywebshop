@@ -130,7 +130,7 @@ export const products: Product[] = [
     price: 129,
     originalPrice: 189,
     image:
-      "https://cdn.shopify.com/s/files/1/0556/2633/4375/products/Fundamental500g_1.jpg?v=1663768843",
+      "https://johanochnystrom.se/cdn/shop/files/johan-och-nystrom-house-espresso-fundamental_1100x.jpg?v=1700230275",
     category: "beans",
     features: ["Specialkaffe", "Hållbart odlat", "Rostat i Sverige"],
   },
