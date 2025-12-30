@@ -37,6 +37,10 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "johanochnystrom.se",
       },
+      {
+        protocol: "https",
+        hostname: "breville-production-aem-assets.s3.us-west-2.amazonaws.com",
+      },
     ],
   },
 };

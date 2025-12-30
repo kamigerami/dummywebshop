@@ -5,6 +5,7 @@ export interface Product {
   price: number;
   originalPrice: number;
   image: string;
+  images?: string[];
   category: "machine" | "beans";
   features: string[];
 }
@@ -20,6 +21,13 @@ export const products: Product[] = [
     originalPrice: 15999,
     image:
       "https://assets.sageappliances.com/cdn-cgi/image/width=1300,format=auto/BES882/SES882BSS4GUK1/pdp_1300px.png?pdp", // Official Sage Image
+    images: [
+      "https://assets.sageappliances.com/cdn-cgi/image/width=1300,format=auto/BES882/SES882BSS4GUK1/pdp_1300px.png?pdp",
+      "https://breville-production-aem-assets.s3.us-west-2.amazonaws.com/BES881/BES881_CAROUSEL1_EMEA.jpg",
+      "https://breville-production-aem-assets.s3.us-west-2.amazonaws.com/BES881/BES881_CAROUSEL2_EMEA.jpg",
+      "https://breville-production-aem-assets.s3.us-west-2.amazonaws.com/BES881/BES881_CAROUSEL3_EMEA.jpg",
+      "https://breville-production-aem-assets.s3.us-west-2.amazonaws.com/BES881/BES881_CAROUSEL4_EMEA.jpg",
+    ],
     category: "machine",
     features: [
       "Impess™ Puck System",
@@ -37,6 +45,14 @@ export const products: Product[] = [
     originalPrice: 15999,
     image:
       "https://assets.sageappliances.com/cdn-cgi/image/width=1300,format=auto/BES882/SES882BTR4GUK1/pdp_1300px.png?pdp",
+    images: [
+      "https://assets.sageappliances.com/cdn-cgi/image/width=1300,format=auto/BES882/SES882BTR4GUK1/pdp_1300px.png?pdp",
+      "https://breville-production-aem-assets.s3.us-west-2.amazonaws.com/BES881/SES881_Updated_Dimensions_EMEA_CAROUSEL_01.png",
+      "https://breville-production-aem-assets.s3.us-west-2.amazonaws.com/BES881/BES881_CAROUSEL1_EMEA.jpg",
+      "https://breville-production-aem-assets.s3.us-west-2.amazonaws.com/BES881/BES881_CAROUSEL2_EMEA.jpg",
+      "https://breville-production-aem-assets.s3.us-west-2.amazonaws.com/BES881/BES881_CAROUSEL3_EMEA.jpg",
+      "https://breville-production-aem-assets.s3.us-west-2.amazonaws.com/BES881/BES881_CAROUSEL4_EMEA.jpg",
+    ],
     category: "machine",
     features: [
       "Impess™ Puck System",
@@ -53,8 +69,7 @@ export const products: Product[] = [
       "Upplev tredje vågens specialkaffe hemma med hjälp av Swipe, Select och Impress. Barista Touch™ Impress guidar dig genom varje steg för att göra exakt det kaffe du vill ha, och IMPRESS™ Puck System säkerställer perfekt dosering och packning. Exklusiv blå finish.",
     price: 14299,
     originalPrice: 15999,
-    image:
-      "https://assets.sageappliances.com/cdn-cgi/image/width=1300,format=auto/BES882/SES882DBL4GUK1/pdp_1300px.png?pdp",
+    image: "/images/sage-damson-blue.png",
     category: "machine",
     features: [
       "Impess™ Puck System",
@@ -73,6 +88,13 @@ export const products: Product[] = [
     originalPrice: 31999,
     image:
       "https://assets.sageappliances.com/cdn-cgi/image/width=1300,format=auto/BES990/SES990BSS4EEU1/pdp1.png?pdp",
+    images: [
+      "https://assets.sageappliances.com/cdn-cgi/image/width=1300,format=auto/BES990/SES990BSS4EEU1/pdp1.png?pdp",
+      "https://breville-production-aem-assets.s3.us-west-2.amazonaws.com/BES990/3_SES990BSS_EUK_Angles_Profile_Right.png",
+      "https://breville-production-aem-assets.s3.us-west-2.amazonaws.com/BES990/5_SES990BSS_EUK_Angles_Side_Right.png",
+      "https://breville-production-aem-assets.s3.us-west-2.amazonaws.com/BES990/6_SES990BSS_EUK_Angles_Back_Tank-Closed.png",
+      "https://breville-production-aem-assets.s3.us-west-2.amazonaws.com/BES990/7_SES990BSS_EUK_Angles_Back_Tank-Open.png",
+    ],
     category: "machine",
     features: [
       "Dubbla kokare",
@@ -90,6 +112,13 @@ export const products: Product[] = [
     originalPrice: 11999,
     image:
       "https://assets.sageappliances.com/cdn-cgi/image/width=1300,format=auto/BES878/SES878BSS4EEU1/pdp.jpg?pdp",
+    images: [
+      "https://assets.sageappliances.com/cdn-cgi/image/width=1300,format=auto/BES878/SES878BSS4EEU1/pdp.jpg?pdp",
+      "https://breville-production-aem-assets.s3.us-west-2.amazonaws.com/BES878/SES878_CAROUSEL1_EMEA_NEW.png",
+      "https://breville-production-aem-assets.s3.us-west-2.amazonaws.com/BES878/SES878EUK_CAROUSEL1.png",
+      "https://breville-production-aem-assets.s3.us-west-2.amazonaws.com/BES878/SES878EUK_CAROUSEL2.png",
+      "https://breville-production-aem-assets.s3.us-west-2.amazonaws.com/BES878/08_SES878_EUK_1300px.jpg",
+    ],
     category: "machine",
     features: [
       "LCD-skärm för feedback",
@@ -105,7 +134,14 @@ export const products: Product[] = [
     price: 11999,
     originalPrice: 11999,
     image:
-      "https://assets.sageappliances.com/cdn-cgi/image/width=1300,format=auto/BES878/SES878BTR4EEU1/pdp.jpg?pdp",
+      "https://assets.sageappliances.com/cdn-cgi/image/width=1300,format=auto/BES878/SES878BTR4GEU1/pdp.jpg?pdp",
+    images: [
+      "https://assets.sageappliances.com/cdn-cgi/image/width=1300,format=auto/BES878/SES878BTR4GEU1/pdp.jpg?pdp",
+      "https://breville-production-aem-assets.s3.us-west-2.amazonaws.com/BES878/SES878_CAROUSEL1_EMEA_NEW.png",
+      "https://breville-production-aem-assets.s3.us-west-2.amazonaws.com/BES878/SES878EUK_CAROUSEL1.png",
+      "https://breville-production-aem-assets.s3.us-west-2.amazonaws.com/BES878/SES878EUK_CAROUSEL2.png",
+      "https://breville-production-aem-assets.s3.us-west-2.amazonaws.com/BES878/08_SES878_EUK_1300px.jpg",
+    ],
     category: "machine",
     features: [
       "LCD-skärm för feedback",

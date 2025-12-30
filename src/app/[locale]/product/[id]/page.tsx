@@ -4,7 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
+import { AddToCartButton } from "@/components/AddToCartButton";
 import { ProductCard } from "@/components/ProductCard";
+import { ProductImageGallery } from "@/components/ProductImageGallery";
 import { products } from "@/data/products";
 
 interface PageProps {
@@ -110,17 +112,13 @@ export default async function ProductPage({ params }: PageProps) {
 
         <div className="grid gap-12 lg:grid-cols-2">
           {/* Image Section */}
-          <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-sm">
-            <div className="absolute top-4 right-4 z-10 rounded-full bg-amber-600 px-3 py-1 text-sm font-bold text-white">
+          <div className="relative">
+            <div className="absolute top-4 right-4 z-10 rounded-full bg-amber-600 px-3 py-1 text-sm font-bold text-white shadow-sm">
               -{discount}%
             </div>
-            <Image
-              src={product.image}
-              alt={product.name}
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 50vw"
-              priority
+            <ProductImageGallery
+              images={product.images || [product.image]}
+              name={product.name}
             />
           </div>
 
@@ -168,13 +166,7 @@ export default async function ProductPage({ params }: PageProps) {
             </div>
 
             <div className="flex flex-col gap-4 sm:flex-row">
-              <Link
-                href="/cart"
-                className="flex flex-1 items-center justify-center gap-3 rounded-full bg-amber-600 py-4 font-bold text-white shadow-lg transition-all hover:scale-[1.02] hover:bg-amber-500 hover:shadow-amber-900/20"
-              >
-                <ShoppingBag className="h-5 w-5" />
-                Lägg i varukorgen
-              </Link>
+              <AddToCartButton product={product} />
             </div>
 
             <div className="mt-8 flex items-center gap-3 text-sm text-stone-500">
