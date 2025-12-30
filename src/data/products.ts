@@ -130,7 +130,7 @@ export const products: Product[] = [
     price: 129,
     originalPrice: 189,
     image:
-      "https://assets.icanet.se/t_product_large_v1,f_auto/7350045064912.jpg",
+      "https://cdn.shopify.com/s/files/1/0556/2633/4375/products/Fundamental500g_1.jpg?v=1663768843",
     category: "beans",
     features: ["Specialkaffe", "Hållbart odlat", "Rostat i Sverige"],
   },
