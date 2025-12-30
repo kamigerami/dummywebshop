@@ -13,10 +13,10 @@ export const products: Product[] = [
   // Machines
   {
     id: "sage-barista-touch-impress",
-    name: "Sage Barista Touch Impress SES882BSS",
+    name: "Sage Barista Touch Impress SES 882 BSS",
     description:
       "Upplev tredje vågens specialkaffe hemma med hjälp av Swipe, Select och Impress. Barista Touch™ Impress guidar dig genom varje steg för att göra exakt det kaffe du vill ha, och IMPRESS™ Puck System säkerställer perfekt dosering och packning.",
-    price: 12299, // ~30% off 15999
+    price: 12299, // ~25% off 15999
     originalPrice: 15999,
     image:
       "https://assets.sageappliances.com/cdn-cgi/image/width=1300,format=auto/BES882/SES882BSS4GUK1/pdp_1300px.png?pdp", // Official Sage Image
@@ -26,6 +26,42 @@ export const products: Product[] = [
       "ThermoJet® uppvärmning",
       "Auto MilQ handsfree mikroskum",
       "Pekskärmsguide",
+    ],
+  },
+  {
+    id: "sage-barista-touch-impress-black",
+    name: "Sage Barista Touch Impress SES882BTR (Black Truffle)",
+    description:
+      "Upplev tredje vågens specialkaffe hemma med hjälp av Swipe, Select och Impress. Barista Touch™ Impress guidar dig genom varje steg för att göra exakt det kaffe du vill ha, och IMPRESS™ Puck System säkerställer perfekt dosering och packning. Elegant svart finish.",
+    price: 14299,
+    originalPrice: 15999,
+    image:
+      "https://assets.sageappliances.com/cdn-cgi/image/width=1300,format=auto/BES882/SES882BTR4GUK1/pdp_1300px.png?pdp",
+    category: "machine",
+    features: [
+      "Impess™ Puck System",
+      "ThermoJet® uppvärmning",
+      "Auto MilQ handsfree mikroskum",
+      "Pekskärmsguide",
+      "Black Truffle finish",
+    ],
+  },
+  {
+    id: "sage-barista-touch-impress-blue",
+    name: "Sage Barista Touch Impress SES882DBL (Damson Blue)",
+    description:
+      "Upplev tredje vågens specialkaffe hemma med hjälp av Swipe, Select och Impress. Barista Touch™ Impress guidar dig genom varje steg för att göra exakt det kaffe du vill ha, och IMPRESS™ Puck System säkerställer perfekt dosering och packning. Exklusiv blå finish.",
+    price: 14299,
+    originalPrice: 15999,
+    image:
+      "https://assets.sageappliances.com/cdn-cgi/image/width=1300,format=auto/BES882/SES882DBL4GUK1/pdp_1300px.png?pdp",
+    category: "machine",
+    features: [
+      "Impess™ Puck System",
+      "ThermoJet® uppvärmning",
+      "Auto MilQ handsfree mikroskum",
+      "Pekskärmsguide",
+      "Damson Blue finish",
     ],
   },
   {
@@ -59,6 +95,40 @@ export const products: Product[] = [
       "LCD-skärm för feedback",
       "3 sekunders uppvärmning",
       "Integrerad konisk kvarn",
+    ],
+  },
+  {
+    id: "sage-barista-pro-black",
+    name: "Sage Barista Pro SES878BTR (Black Truffle)",
+    description:
+      "Baristakvalitet med nytt intuitivt gränssnitt som ger dig all information du behöver för att skapa tredje vågens specialkaffe hemma. Inbyggd kvarn levererar rätt mängd malet kaffe på begäran. Elegant svart finish.",
+    price: 11999,
+    originalPrice: 11999,
+    image:
+      "https://assets.sageappliances.com/cdn-cgi/image/width=1300,format=auto/BES878/SES878BTR4EEU1/pdp.jpg?pdp",
+    category: "machine",
+    features: [
+      "LCD-skärm för feedback",
+      "3 sekunders uppvärmning",
+      "Integrerad konisk kvarn",
+      "Black Truffle finish",
+    ],
+  },
+  {
+    id: "sage-barista-pro-blue",
+    name: "Sage Barista Pro SES878DBL (Damson Blue)",
+    description:
+      "Baristakvalitet med nytt intuitivt gränssnitt som ger dig all information du behöver för att skapa tredje vågens specialkaffe hemma. Inbyggd kvarn levererar rätt mängd malet kaffe på begäran. Exklusiv blå finish.",
+    price: 11999,
+    originalPrice: 11999,
+    image:
+      "https://assets.sageappliances.com/cdn-cgi/image/width=1300,format=auto/BES878/SES878DBL4EEU1/pdp.jpg?pdp",
+    category: "machine",
+    features: [
+      "LCD-skärm för feedback",
+      "3 sekunders uppvärmning",
+      "Integrerad konisk kvarn",
+      "Damson Blue finish",
     ],
   },
   {
